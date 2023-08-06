@@ -81,9 +81,9 @@
                     <div class="row">
                          <div class="col-md-offset-3 col-md-6 col-sm-12">
                               <div class="home-info">
-                                   <?= implode('', $hero['text'] ?? '') ?>
+                                   <?= implode('', $hero['text'] ?? []) ?>
                                    <form action="<?= $hero['form']['action'] ?? '' ?>" method="get" class="online-form">
-                                        <?php implode('', $hero['form']['input'] ?? '') ?>
+                                        <?php implode('', $hero['form']['input'] ?? []) ?>
                                         <button type="submit" class="form-control"><?= $hero['form']['button'] ?? '' ?></button>
                                    </form>
                               </div>
@@ -166,7 +166,7 @@
                                         <div class="team-thumb">
                                              <img src="<?= $team['image'] ?? '' ?>" class="img-responsive" alt="Andrew Orange">
                                              <div class="team-info team-thumb-up">
-                                                  <?= implode('', $team['summary']) ?>
+                                                  <?= implode('', $team['summary'] ?? []) ?>
                                              </div>
                                         </div>
                                    </div>
